@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 # Use Haml format in views
 gem 'hamlit-rails', '~> 0.2.3'
+# Use OAuth for login
+gem 'omniauth', '~> 1.9.1'
+gem 'omniauth-github', '~> 1.4.0'
+gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
