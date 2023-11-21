@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_19_010056) do
+ActiveRecord::Schema.define(version: 2023_11_21_061138) do
 
   create_table "events", force: :cascade do |t|
     t.bigint "owner_id"
@@ -41,8 +41,7 @@ ActiveRecord::Schema.define(version: 2023_11_19_010056) do
     t.string "image_url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["provider"], name: "index_users_on_provider", unique: true
-    t.index ["uid"], name: "index_users_on_uid", unique: true
+    t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
   end
 
   add_foreign_key "tickets", "events"
