@@ -1,14 +1,14 @@
 require "application_system_test_case"
 
 class EventsTest < ApplicationSystemTestCase
-  test "show /events/:id" do
+  test "events#show" do
     event = FactoryBot.create(:event)
     visit event_url(event)
   
     assert_selector "h1", text: event.name
   end
 
-  test "show /events/new" do
+  test "events#new" do
     user = FactoryBot.create(:user)
     sign_in_as user
 
@@ -16,7 +16,7 @@ class EventsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'イベント作成'
   end
 
-  test "write in the form on /events/new and post" do
+  test "write in the form on events#new and post" do
     user = FactoryBot.create(:user)
     sign_in_as user
 
