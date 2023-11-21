@@ -46,5 +46,6 @@ class EventsTest < ApplicationSystemTestCase
 
     click_on '登録する'
     assert_selector 'div.alert', text: '作成しました'
+    assert_selector 'a.btn', test: 'イベントを削除する'
   end
 end
