@@ -56,7 +56,10 @@
         - @tickets.each do |ticket|
           %li.list-group-item
             - atendee = ticket.user
-            = link_to(url_for_github(atendee), class: 'card-link') do
-              = image_tag atendee.image_url, width: 20, height:20
-              = "@#{atendee.name}"
-            = ticket.comment
+            - if atendee
+              = link_to(url_for_github(atendee), class: 'card-link') do
+                = image_tag atendee.image_url, width: 20, height:20
+                = "@#{atendee.name}"
+              = ticket.comment
+            - else
+              退会したユーザです
