@@ -16,4 +16,19 @@ class EventTest < ActiveSupport::TestCase
     event = FactoryBot.create :event
     assert_not event.created_by? nil
   end
+
+  test "#created_by? true using stub" do
+    event = FactoryBot.create :event
+    user = User.new
+    user.stub(:id, event.owner_id) do
+      assert event.created_by? user
+    end
+  end
+
+  test "#created_by? true using mock" do
+    event = FactoryBot.create :event
+    user = MiniTest::Mock.new.expect(:id, event.owner_id)
+    assert event.created_by? user
+    user.verify
+  end
 end
