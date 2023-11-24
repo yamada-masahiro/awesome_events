@@ -42,9 +42,11 @@ class EventsController < ApplicationController
     params.require(:event).permit(
       :name,
       :place,
+      :image,
+      :remove_image,
       :content,
       :start_at,
-      :end_at
+      :end_at,
     )
   end
 end
