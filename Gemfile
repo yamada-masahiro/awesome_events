@@ -34,6 +34,8 @@ gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem 'rails-i18n', '~> 6.0.0'
 # Paginate with Kaminari
 gem 'kaminari', '~> 1.2.0'
+# Use searchkick for search engine
+gem 'searchkick', '~> 4.3.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
