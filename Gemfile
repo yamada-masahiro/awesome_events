@@ -35,7 +35,8 @@ gem 'rails-i18n', '~> 6.0.0'
 # Paginate with Kaminari
 gem 'kaminari', '~> 1.2.0'
 # Use searchkick for search engine
-# gem 'searchkick', '~> 4.3.0'
+gem 'searchkick'
+gem 'elasticsearch'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
