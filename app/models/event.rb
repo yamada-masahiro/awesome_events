@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :tickets, dependent: :destroy
   has_one_attached :image
   attr_accessor :remove_image
-  # searchkick language: 'japanese'
+  searchkick language: 'japanese'
 
   before_save :remove_image_if_user_accept
 
